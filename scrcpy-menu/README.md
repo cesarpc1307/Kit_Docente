@@ -46,10 +46,24 @@ Está basado en la potente herramienta libre **[scrcpy](https://github.com/Genym
 
 ---
 
+## 📂 Carpeta de grabaciones automáticas
+
+Cuando se selecciona la opción de **grabar clase**, el sistema:
+
+- ✅ Crea automáticamente una carpeta llamada **`Grabaciones`** (si no existe)
+- ✅ Guarda el video en esa carpeta
+- ✅ Asigna un nombre basado en la **fecha y hora**, por ejemplo: Grabaciones/grabacion_2024-04-13_2035.mp4
+
+Esto permite mantener un registro organizado de cada clase sin sobrescribir archivos anteriores.  
+Los archivos generados pueden ser movidos, renombrados o compartidos posteriormente.
+
+---
+
 ## 🙌 Créditos y agradecimientos
 
 - SCRCPY: herramienta desarrollada por [Genymobile](https://github.com/Genymobile)
 - Este script es una adaptación orientada a uso académico, creado por César Pineda
+
 ---
 
 **¡Docentes con tecnología libre, activa e inteligente!**
