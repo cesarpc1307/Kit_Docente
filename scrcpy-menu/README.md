@@ -22,10 +22,9 @@ Está basado en la potente herramienta libre **[scrcpy](https://github.com/Genym
 ## 🧰 Archivos incluidos
 
 | Archivo                 | Descripción |
-|------------------------|-------------|
-| `scrcpy_docentes.bat`  | Menú completo para ejecutar SCRCPY con diferentes opciones docentes |
-| `LEEME.txt`            | Guía rápida de uso |
-| `scrcpy` (no incluido) | Debe ser descargado desde el repositorio oficial de Genymobile |
+|------------------------------------------------------------------------|---------------------------------------------------------------------|
+| [`scrcpy_docentes.bat`](./scrcpy_docentes.bat)                         | Menú completo para ejecutar SCRCPY con diferentes opciones docentes |
+| [`scrcpy`](https://github.com/Genymobile/scrcpy/releases) *(externo)*  | Debe ser descargado desde el repositorio oficial de Genymobile      |
 
 ---
 
