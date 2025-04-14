@@ -23,9 +23,9 @@ echo 8. Salir
 echo ----------------------------------------------------------
 set /p opcion=Seleccione una opcion (1-8): 
 
-if "%opcion%"=="1" cls & scrcpy & goto volver
-if "%opcion%"=="2" cls & scrcpy --fullscreen & goto volver
-if "%opcion%"=="3" cls & scrcpy --no-control & goto volver
+if "%opcion%"=="1" cls & adb disconnect >nul & scrcpy -d & goto volver
+if "%opcion%"=="2" cls & adb disconnect >nul & scrcpy --fullscreen -d & goto volver
+if "%opcion%"=="3" cls & adb disconnect >nul & scrcpy --no-control -d & goto volver
 if "%opcion%"=="4" goto submenu4
 if "%opcion%"=="5" goto submenu5
 if "%opcion%"=="6" goto submenu6
@@ -51,6 +51,7 @@ echo.
 set /p ip=IP: 
 if /I "%ip%"=="Q" cls & goto menu
 if "%ip%"=="" cls & goto menu
+adb disconnect >nul
 echo Conectando a %ip%...
 adb connect %ip%
 if errorlevel 1 (
@@ -58,7 +59,8 @@ if errorlevel 1 (
     pause
     goto menu
 )
-scrcpy
+scrcpy -s %ip%
+adb disconnect >nul
 adb usb
 goto volver
 
@@ -82,7 +84,8 @@ set filename=Grabaciones\grabacion_%timestamp%.mp4
 
 if "%modo%"=="1" (
     cls
-    scrcpy --record %filename%
+    adb disconnect >nul
+    scrcpy --record %filename% -d
     goto volver
 )
 if "%modo%"=="2" (
@@ -92,8 +95,10 @@ if "%modo%"=="2" (
     set /p ip=IP: 
     if /I "%ip%"=="Q" cls & goto menu
     if "%ip%"=="" cls & goto menu
+    adb disconnect >nul
     adb connect %ip%
-    scrcpy --record %filename%
+    scrcpy --record %filename% -s %ip%
+    adb disconnect >nul
     adb usb
     goto volver
 )
@@ -111,7 +116,8 @@ set /p modo=Seleccione una opcion (1/2/Q):
 if /I "%modo%"=="Q" cls & goto menu
 if "%modo%"=="1" (
     cls
-    scrcpy --turn-screen-off
+    adb disconnect >nul
+    scrcpy --turn-screen-off -d
     goto volver
 )
 if "%modo%"=="2" (
@@ -121,8 +127,10 @@ if "%modo%"=="2" (
     set /p ip=IP: 
     if /I "%ip%"=="Q" cls & goto menu
     if "%ip%"=="" cls & goto menu
+    adb disconnect >nul
     adb connect %ip%
-    scrcpy --turn-screen-off
+    scrcpy --turn-screen-off -s %ip%
+    adb disconnect >nul
     adb usb
     goto volver
 )
@@ -140,7 +148,8 @@ set /p modo=Seleccione una opcion (1/2/Q):
 if /I "%modo%"=="Q" cls & goto menu
 if "%modo%"=="1" (
     cls
-    scrcpy --window-borderless
+    adb disconnect >nul
+    scrcpy --window-borderless -d
     goto volver
 )
 if "%modo%"=="2" (
@@ -150,8 +159,10 @@ if "%modo%"=="2" (
     set /p ip=IP: 
     if /I "%ip%"=="Q" cls & goto menu
     if "%ip%"=="" cls & goto menu
+    adb disconnect >nul
     adb connect %ip%
-    scrcpy --window-borderless
+    scrcpy --window-borderless -s %ip%
+    adb disconnect >nul
     adb usb
     goto volver
 )
