@@ -66,3 +66,14 @@ Los archivos generados pueden ser movidos, renombrados o compartidos posteriorme
 ---
 
 **¡Docentes con tecnología libre, activa e inteligente!**
+
+## 📷 Capturas de Pantalla
+
+![Menú para ejecutar SCRCPY](./Menu_Scrcpy.png)
+
+---
+
+![Menú para ejecutar SCRCPY](./Grabar_Scrcpy.png)
+
+
+
