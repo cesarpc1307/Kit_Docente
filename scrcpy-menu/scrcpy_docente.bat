@@ -3,14 +3,14 @@ title scrcpy - Herramientas Docentes
 chcp 65001 >nul
 
 :inicio
+goto menu
+
+:menu
 cls
 echo ===========================================================
 echo   Herramienta para proyectar/controlar celular con SCRCPY
 echo ===========================================================
 echo.
-
-:menu
-cls
 echo --------------------- MENU PRINCIPAL ---------------------
 echo 1. Modo normal por USB
 echo 2. Pantalla completa
