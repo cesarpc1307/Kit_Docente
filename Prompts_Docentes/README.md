@@ -156,4 +156,4 @@ Este kit se irá actualizando con nuevos ejemplos prácticos según las necesida
 
 📌 **Autor:** César Pineda  
 🎓 Educación Virtual - UNAH Campus Copán  
-🔗 Repositorio: [github.com/CesarPinedaHn/Kit_Docente](https://github.com/cesarpc1307/Kit_Docente/Prompts_Docentes)
+🔗 Repositorio: [github.com/CesarPinedaHn/Kit_Docente](https://github.com/cesarpc1307/Kit_Docente/tree/main/Prompts_Docentes)
